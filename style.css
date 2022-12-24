@@ -5,8 +5,22 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   color: antiquewhite;
+  font-family: Raleway;
+}
+
+a {
+  color: antiquewhite;
+  font-family: Raleway;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: blueviolet;
+  transition: 200ms;
 }
 
 .lateral {
@@ -32,13 +46,9 @@ p {
 
 .inicio {
   width: 95%;
-  height: 700px;
+  height: 500px;
   padding-top: 200px;
   text-align: center;
-}
-
-.icon {
-  padding-top: 120px;
 }
 
 .apresentacao {
@@ -47,15 +57,18 @@ p {
 }
 .banner {
   width: 100%;
-  height: 90px;
+  height: 200px;
   background-image: url(/images/author.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: auto;
+  mask-image: url(/images/author.png);
 }
 
 .texto-generico {
   padding-top: 50px;
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
 }
 
 .projetos {
@@ -81,6 +94,38 @@ p {
   grid-column-start: 3;
   border: solid 1px #fff;
   border-radius: 5px;
+}
+
+@keyframes teste {
+  0% {
+    top: 400px;
+  }
+  25% {
+    top: 420px;
+  }
+  50% {
+    top: 400px;
+  }
+  75% {
+    top: 420px;
+  }
+  100% {
+    top: 400px;
+  }
+}
+
+.icon::before {
+  content: "⏬";
+  display: flex;
+  position: absolute;
+  left: 52.25%;
+  width: auto;
+  height: 40px;
+  padding-top: 120px;
+  font-size: 40px;
+  animation-duration: 1s;
+  animation-name: teste;
+  animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 600px) {
