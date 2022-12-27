@@ -37,5 +37,5 @@ function concatElementDiv() {
     return true;
 }
 
-
+concatElementDiv();
 window.addEventListener('scroll', concatElementDiv);

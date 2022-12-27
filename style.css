@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-  color: blueviolet;
+  color: rgb(144, 129, 158);
   transition: 200ms;
 }
 
@@ -37,8 +37,6 @@ a:hover {
   width: 200px;
   padding-top: 20%;
   background-color: rgba(0, 0, 0, 0.158);
-  margin-left: -10px;
-  margin-top: -10px;
   transition: 0.5s;
 }
 
@@ -50,6 +48,8 @@ a:hover {
 
 .menu-item {
   transition: 0.1s;
+  padding: 0px 15px;
+  z-index: 9;
 }
 
 .content {
@@ -62,6 +62,9 @@ a:hover {
   height: 500px;
   padding-top: 200px;
   text-align: center;
+}
+#destaqueinicio {
+  font-size: 50px;
 }
 
 #video-bg {
@@ -156,7 +159,6 @@ a:hover {
   align-items: center;
   grid-auto-columns: 20%;
   text-align: center;
-  padding-top: 20px;
   padding-bottom: 40px;
 }
 .skill {
@@ -178,6 +180,7 @@ a:hover {
 #skill4 {
   grid-column-start: 4;
 }
+
 /* skill percentage bar */
 .skillpc {
   height: 20px;
@@ -186,10 +189,50 @@ a:hover {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   text-align: right;
+  transition: 2s;
 }
+
+@keyframes pc50 {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes pc60 {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes pc70 {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes pc80 {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
 /* SKILL 1 Web (html/css) */
 #skill1pc {
   width: 80%;
+  animation-name: pc80;
+  animation-duration: 2s;
 }
 #skill1pc::after {
   content: "80%";
@@ -197,6 +240,8 @@ a:hover {
 /* SKILL 2 Javascript*/
 #skill2pc {
   width: 50%;
+  animation-name: pc50;
+  animation-duration: 2s;
 }
 #skill2pc::after {
   content: "50%";
@@ -204,6 +249,8 @@ a:hover {
 /* SKILL 3 PHP */
 #skill3pc {
   width: 70%;
+  animation-name: pc70;
+  animation-duration: 2s;
 }
 #skill3pc::after {
   content: "70%";
@@ -211,17 +258,18 @@ a:hover {
 /* SKILL 4 Python */
 #skill4pc {
   width: 80%;
+  animation-name: pc80;
+  animation-duration: 2s;
 }
 #skill4pc::after {
   content: "80%";
 }
 
-#secskill {
-  display: flexbox;
-  flex-grow: 1;
-  box-sizing: border-box;
+#secskills {
+  display: flex;
+  flex-wrap: wrap;
 }
-.secskills {
+.secskill {
   padding: 5px 10px;
   margin: 5px 5px;
   border: solid 1px #fff;
@@ -235,30 +283,37 @@ a:hover {
   }
   .lateral {
     position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 50px;
-    padding-top: 10px;
-    margin-left: -10px;
-    margin-top: -10px;
-    margin-right: -5px;
+    height: 40px;
+    padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    padding-left: 0;
+  }
+
+  .menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu-item {
+    padding: 0 20px;
   }
   #apresentacao,
   #trabalhos {
-    padding-left: 5px;
-    padding-bottom: 25px;
-  }
-  .menu {
-    padding: 15px 0;
-    width: 100%;
-    display: grid;
-    text-align: left;
+    padding: 15px 20px;
   }
 
   .content {
     padding-left: 0px;
     padding-top: 50px;
     width: 100%;
+    padding-bottom: 40px;
   }
   #video-bg {
     width: auto;
@@ -289,16 +344,6 @@ a:hover {
     margin-bottom: 10px;
   }
 
-  #menu-item1 {
-    grid-column-start: 1;
-  }
-  #menu-item2 {
-    grid-column-start: 2;
-  }
-  #menu-item3 {
-    grid-column-start: 3;
-  }
-
   #skills {
     display: block;
     margin: 0 10px;
@@ -306,6 +351,15 @@ a:hover {
   .skill {
     margin: 10px 0;
     margin-right: 5px;
+  }
+  #secskills {
+    flex-direction: row;
+    padding-left: 5%;
+    width: 90%;
+  }
+  .secskill {
+    flex: 1 1 auto;
+    text-align: center;
   }
 }
 /* 1080p screens */
