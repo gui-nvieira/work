@@ -97,17 +97,17 @@ a:hover {
 #banner {
   width: 100%;
   height: 200px;
-  background-image: url(/images/author.png);
+  background-image: url(./images/author.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto;
-  mask-image: url(/images/author.png);
+  mask-image: url(./images/author.png);
   z-index: 0;
 }
 
 #maskbanner {
-  mask: url(/images/mask.png);
-  -webkit-mask-image: url(/images/mask2.png);
+  mask: url(./images/mask.png);
+  -webkit-mask-image: url(./images/mask2.png);
   mask-size: cover;
   max-width: 100%;
   mask-mode: luminance;
