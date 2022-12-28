@@ -277,7 +277,7 @@ a:hover {
 
 #tech {
   width: 99.5%;
-  height: 450px;
+  height: 500px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -359,12 +359,13 @@ a:hover {
 #latboxright55 {
   display: flex;
   width: auto;
-  height: 379px;
+  height: 430px;
   flex-direction: row-reverse;
 }
 
 #img55 {
   border-radius: 9px;
+  scale: 90%;
 }
 .textbox55 {
 }
@@ -419,7 +420,7 @@ a:hover {
 
 #recpay {
   width: 99.5%;
-  height: 450px;
+  height: 500px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -440,7 +441,7 @@ a:hover {
 
 #ranch {
   width: 99.5%;
-  height: 450px;
+  height: 500px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
