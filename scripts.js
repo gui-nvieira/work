@@ -548,4 +548,37 @@ var VanillaTilt = (function () {
 
 }());
 
-    // --------vanilla tilt final -----------------
+// --------vanilla tilt final -----------------
+
+
+// ---------- show job divs start -----------
+
+// const divpares = [["55techbutton", "tech"], ["rpbutton", "recpay"], ["ranchbutton", "ranch"]];
+const buttons = document.getElementsByClassName("card");
+const cards = document.getElementsByClassName("jobcards");
+
+const buttonPressed = e => {
+    // usando paradigma imperativo
+    // TODO transformar isso em funcional usando o array divpares
+    if (e.target.id == "55techbutton") {
+        cards[0].classList.add("cardactive");
+        cards[1].classList.remove("cardactive");
+        cards[2].classList.remove("cardactive");
+    }
+    if (e.target.id == "rpbutton") {
+        cards[0].classList.remove("cardactive");
+        cards[1].classList.add("cardactive");
+        cards[2].classList.remove("cardactive");
+    }
+    if (e.target.id == "ranchbutton") {
+        cards[0].classList.remove("cardactive");
+        cards[1].classList.remove("cardactive");
+        cards[2].classList.add("cardactive");
+    }
+}
+
+for (let button of buttons) {
+    button.addEventListener("click", buttonPressed);
+}
+
+// ---------- show job divs end -----------

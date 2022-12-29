@@ -404,7 +404,6 @@ a:hover {
 }
 
 .iconstextbox55 {
-  padding-bottom: 5px;
   justify-content: center;
 }
 
@@ -417,6 +416,25 @@ a:hover {
 #card55-3 {
   grid-column-start: 3;
 }
+#card55-6 {
+  background: rgb(19, 20, 20);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(19, 20, 20, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(19, 20, 20, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(19, 20, 20, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131414",endColorstr="#000000",GradientType=1);
+}
 
 #recpay {
   width: 99.5%;
@@ -424,21 +442,107 @@ a:hover {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background-color: rgb(243, 240, 238);
+  background: rgb(255, 245, 228);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(255, 245, 228, 1) 0%,
+    rgba(255, 238, 225, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(255, 245, 228, 1) 0%,
+    rgba(255, 238, 225, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(255, 245, 228, 1) 0%,
+    rgba(255, 238, 225, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff5e4",endColorstr="#ffeee1",GradientType=1);
   border-radius: 5px;
 }
 
 #latboxrp {
+  display: block;
+  padding: 4% 0;
 }
 #latboxleftrp {
+  float: left;
+  width: 39%;
 }
+#latboxrightrp {
+  float: left;
+  width: 55%;
+}
+#latboxextrarp {
+  float: left;
+  height: 400px;
+  width: 3%;
+}
+
+.cardsextrasrp {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 25%;
+  margin-left: 100%;
+}
+#cardex1 {
+  background-color: #008af0;
+}
+#cardex2 {
+  background-color: #00aaff;
+}
+#cardex3 {
+  background-color: #ff7c00;
+}
+#cardex4 {
+  background-color: #ffad00;
+}
+
+.comments {
+  font-size: 10pt;
+}
+#commentsrp {
+  color: #131414;
+}
+.textboxrp {
+  padding-right: 120px;
+  padding-bottom: 10px;
+  font-size: 11pt;
+}
+
+.textboxrp::before {
+  content: "► ";
+  color: #008af0;
+}
+
+.resultadosrp {
+  font-weight: 600;
+}
+
+.separator {
+  width: 80%;
+  border: solid 1px black;
+  margin-bottom: 10px;
+}
+
 #headerboxrp {
   color: #000;
+  padding-bottom: 15px;
 }
 .textboxrp {
   color: #000;
 }
 
+#imgrecpay {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: 80%;
+  padding-top: 10%;
+  padding-left: 10%;
+}
 #ranch {
   width: 99.5%;
   height: 500px;
@@ -462,6 +566,16 @@ a:hover {
   color: #000;
 }
 
+.jobcards {
+  display: none;
+  transition: 2s;
+}
+
+.cardactive {
+  display: block;
+  transition: 2s;
+}
+
 /* Media query celulares */
 @media screen and (max-width: 600px) {
   html {
@@ -476,6 +590,7 @@ a:hover {
     padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.8);
     padding-left: 0;
+    z-index: 999;
   }
 
   .menu {
@@ -485,6 +600,7 @@ a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
+    z-index: 999;
   }
 
   .menu-item {
